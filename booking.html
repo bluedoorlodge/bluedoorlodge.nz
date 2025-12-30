@@ -122,8 +122,10 @@ header {
   transition: transform 0.3s ease;
 }
 
-.pricing-item:hover {
-  transform: translateX(5px);
+@media (hover: hover) {
+  .pricing-item:hover {
+    transform: translateX(5px);
+  }
 }
 
 .pricing-button {
@@ -212,6 +214,84 @@ header {
   color: #d8c9cd;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+/* ==============================
+   MOBILE FIX — DO NOT TOUCH DESKTOP
+============================== */
+@media (max-width: 768px) {
+
+  body {
+    margin: 0.5rem;
+  }
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* BOOKING CONTAINER */
+  .booking {
+    padding: 2rem 1.2rem;
+    border-radius: 12px;
+  }
+
+  .booking h2 {
+    font-size: 2rem;
+  }
+
+  .booking p {
+    font-size: 1rem;
+  }
+
+  /* PRICING STACK */
+  .pricing-vertical {
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .pricing-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .pricing-button {
+    width: 100%;
+    min-width: unset;
+    padding: 14px;
+    font-size: 1rem;
+    transform: none;
+  }
+
+  .pricing-button:hover {
+    transform: none;
+  }
+
+  .pricing-desc {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* SUMMARY BOX */
+  .booking-summary {
+    padding: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* FOOTER */
